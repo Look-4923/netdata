@@ -38,7 +38,7 @@ jobs:
           submodules: recursive
       - name: Check source files
         id: check-source-files
-        uses: step-security/changed-files@v45
+        uses: step-security/changed-files@v47
         with:
           since_last_remote_commit: ${{ github.event_name != 'pull_request' }}
           files: |
@@ -57,7 +57,7 @@ jobs:
             **/*.md
       - name: Check build files
         id: check-build-files
-        uses: step-security/changed-files@v45
+        uses: step-security/changed-files@v47
         with:
           since_last_remote_commit: ${{ github.event_name != 'pull_request' }}
           files: |
@@ -86,7 +86,7 @@ jobs:
             src/go/tools/topology-ip-intel-downloader/README.md
       - name: Check static build files
         id: check-static-build-files
-        uses: step-security/changed-files@v45
+        uses: step-security/changed-files@v47
         with:
           since_last_remote_commit: ${{ github.event_name != 'pull_request' }}
           files: |
